@@ -9,7 +9,7 @@ import { Band } from '../band.model';
   styleUrls: ['./band-details.component.css']
 })
 export class BandDetailsComponent implements OnInit {
-  @Input() band: Band;
+  private band: Band[];
   navigated = false;
 
   constructor(

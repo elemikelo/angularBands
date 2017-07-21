@@ -18,6 +18,7 @@ export class BandListComponent implements OnInit {
 
   ngOnInit(): void {
     this.bands = this._bandService.getBands();
+
   }
 
   goToBandDetail(band: Band) {

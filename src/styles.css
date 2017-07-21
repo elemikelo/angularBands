@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-
-* {
+/* 
+ * {
 	box-sizing: border-box;
 }
 
@@ -15,4 +15,27 @@ body {
 
 a:link {
 	text-decoration: none;
+}  */
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+	margin: 0px;
+  background: #fafafa !important;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif;
+ }
+
+.georgia-font {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
+
+.blink-font {
+  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: #00ab6b; }
+a:hover {
+  color: #1c9963; } 

@@ -1,0 +1,43 @@
+.container{
+  margin-top:100px;
+}
+.container-img{
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+  flex-direction: row;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding: 20px 20px;
+  margin-right: auto;
+  margin-left: auto;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+  border: 1px solid rgba(0, 0, 0, .09);
+  color: rgba(0, 0, 0, .8);
+
+} 
+
+.itemBand{
+  margin: 10px;
+}
+
+
+h2 {
+		margin-top: 1em;
+		text-align: center;
+		text-transform: uppercase;
+		color: #c0392b;
+	}
+
+
+img {
+    display: block;
+    border-radius: 20px;
+		float: left;
+    max-width: 240px;
+    height: 150px;
+		margin-right: 1em;
+		border: 2px solid #e74c3c;
+  }
+  
