@@ -1,3 +1,9 @@
-<p>
-  band-details works!
-</p>
+<div class="container" *ngIf="band">
+  <h2>{{band.name}} details</h2>
+  <p class="description">{{band.description}}</p>
+  <img class="img" src="{{band.img}}" alt="{{band.name}} photo" />
+  <h2>{{band.name}} YouTube video</h2>
+  <div class="video-container">
+    <iframe class="video-fix" [src]="band.video" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>

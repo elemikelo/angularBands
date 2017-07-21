@@ -9,6 +9,9 @@ import { FooterComponent } from './footer/footer.component';
 import { UnderConstructionComponent } from './under-construction/under-construction.component';
 import { AppRoutingModule } from './app-routing/app-routing.module'
 
+import { BandService } from './band.service';
+import { BandListComponent } from './band-list/band-list.component'
+
 
 @NgModule({
   declarations: [
@@ -16,14 +19,15 @@ import { AppRoutingModule } from './app-routing/app-routing.module'
     BandDetailsComponent,
     HeaderComponent,
     FooterComponent,
-    UnderConstructionComponent
+    UnderConstructionComponent,
+    BandListComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [BandService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

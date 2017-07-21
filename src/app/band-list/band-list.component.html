@@ -1,0 +1,8 @@
+<div class="">
+  <h2>List Bands</h2>
+  <div *ngFor="let band of bands" (click)="gotoDetail(band)" class="">
+    <img src="{{band.img}}" alt="{{band.name}} photography" />
+    <p>{{band.id}} {{band.name}}</p>
+    <span>{{band.description}}</span>
+  </div>
+</div>
