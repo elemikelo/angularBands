@@ -34,11 +34,7 @@ export class BandService {
         slug: "queen"
       }
     ]
-
   }
-
-
-
 }
 
 

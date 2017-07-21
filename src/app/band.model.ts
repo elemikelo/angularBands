@@ -3,7 +3,7 @@ export class Band {
   name: string;
   description: string;
   img: string;
-  video: string;
+  videoId: string;
   slug: string;
 }
 
