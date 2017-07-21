@@ -9,15 +9,33 @@ import { Band } from '../band.model';
   styleUrls: ['./band-details.component.css']
 })
 export class BandDetailsComponent implements OnInit {
-  private band: Band[];
-  navigated = false;
+  bands: Band[];
+  slug;
+  bandSelected;
+  private sub: any;
+  bandArray: Band[];
+  // bandSelected;
 
   constructor(
     private _bandService: BandService,
-    private route: ActivatedRoute) { }
+    private _route: ActivatedRoute) { }
 
   ngOnInit() {
 
+    this.bandArray = this._bandService.getBands();
+
+    this.sub = this._route.params.subscribe(params => {
+      this.slug = params['slug']
+      console.log(this.slug)
+    });
+
+    let obj = this.bandArray.find(x => x.slug === this.slug);
+    let index = this.bandArray.indexOf(obj);
+    this.bandArray.fill(obj.slug = this.slug, index, index++);
+
+    this.bandSelected = obj
+
+
+
   }
 }
-

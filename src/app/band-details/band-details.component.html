@@ -1,9 +1,9 @@
 <div class="container">
-  <h2>{{band.name}} details</h2>
-  <p class="description">{{band.description}}</p>
-  <img class="img" src="{{band.img}}" alt="{{band.name}} photo" />
-  <h2>{{band.name}} YouTube video</h2>
+  <h2>{{bandSelected.name}} details</h2>
+  <p class="description">{{bandSelected.description}}</p>
+  <img class="img" src="{{bandSelected.img}}" alt="{{bandSelected.name}} photo" />
+  <h2>{{bandSelected.name}} YouTube video</h2>
   <div class="video-container">
-    <iframe class="video-fix" [src]="band.video" frameborder="0" allowfullscreen></iframe>
+    <iframe class="video-fix" [src]="bandSelected.video" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
