@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { BandService } from '../band.service';
 import { Band } from '../band.model';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-band-details',
@@ -10,13 +11,15 @@ import { Band } from '../band.model';
 })
 export class BandDetailsComponent implements OnInit {
   bands: Band[];
+  bandArray: any;
   slug;
   bandSelected;
-  private sub: any;
-  bandArray: Band[];
-  // bandSelected;
+  sub: any;
+  urlYoutube
+
 
   constructor(
+    private domSanitizer: DomSanitizer,
     private _bandService: BandService,
     private _route: ActivatedRoute) { }
 
@@ -26,16 +29,20 @@ export class BandDetailsComponent implements OnInit {
 
     this.sub = this._route.params.subscribe(params => {
       this.slug = params['slug']
-      console.log(this.slug)
     });
 
+    // search slug in obj
     let obj = this.bandArray.find(x => x.slug === this.slug);
     let index = this.bandArray.indexOf(obj);
     this.bandArray.fill(obj.slug = this.slug, index, index++);
 
+
+
     this.bandSelected = obj
 
+    //url Youtube
 
+    this.urlYoutube = this.domSanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + this.bandSelected.videoId + '?ecver=1');
 
   }
 }

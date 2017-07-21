@@ -2,8 +2,8 @@
   <h2>{{bandSelected.name}} details</h2>
   <p class="description">{{bandSelected.description}}</p>
   <img class="img" src="{{bandSelected.img}}" alt="{{bandSelected.name}} photo" />
-  <h2>{{bandSelected.name}} YouTube video</h2>
-  <div class="video-container">
-    <iframe class="video-fix" [src]="bandSelected.video" frameborder="0" allowfullscreen></iframe>
+  <h2>{{bandSelected.name}} Video</h2>
+  <div class="”video-responsive”">
+    <iframe width="560" height="315" [src]="urlYoutube" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
