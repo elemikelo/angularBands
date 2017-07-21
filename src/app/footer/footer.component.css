@@ -1,5 +1,5 @@
 footer {
-  padding: 1em;
+  padding: 0.1em;
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -9,7 +9,6 @@ footer {
 
 ul.social-buttons li a {
   display: inline-block;
-  
   background-color: #222;
   height: 40px;
   width: 40px;
@@ -30,8 +29,7 @@ ul.social-buttons li a:hover {
 }
 
 .list-inline{
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   list-style-type: none;
 }
  .copyright{
